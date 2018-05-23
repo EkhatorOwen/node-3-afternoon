@@ -23,6 +23,7 @@ app.use(session({
 }))
 
 app.use(checkForSession)
+
 app.use(express.static(`${__dirname}/build`))
 
 
@@ -32,7 +33,7 @@ app.post('/api/login',login)
 app.post('/api/register',register)
 app.post('/api/signout',signout)
 app.get('/api/user',getUser)
-app.post('api/cart',add);
+app.post('/api/cart',add);
 app.post('/api/cart/checkout',checkout)
 app.delete('/api/cart',remove)
 app.get('/api/search',search)
